@@ -1,3 +1,8 @@
 basic-testing-frontend/node_modules/
+basic-testing-frontend/coverage/
+
 basic-testing-nodejs/node_modules/
+basic-testing-nodejs/coverage/
+
 basic-testing-nodejs-esmodules/node_modules/
+basic-testing-nodejs-esmodules/coverage/
