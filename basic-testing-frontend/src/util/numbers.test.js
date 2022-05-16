@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+
 import { transformToNumber, cleanNumbers } from './numbers';
 
 describe('transformToNumber()', () => {
@@ -14,26 +15,20 @@ describe('transformToNumber()', () => {
     });
     
     it('should transform a string number to a number of type number', () => {
-        // Arrange
         const input = '1';
         
-        // Act
         const result = transformToNumber(input);
     
-        // Assert
         expect(result).toBe(+input);
     });
     
     it('should yield NaN for non-transformable values', () => {
-        // Arrange
         const input = 'domingo';
         const input2 = {};
     
-        // Act
         const result = transformToNumber(input);
         const result2 = transformToNumber(input2);
     
-        // Assert
         expect(result).toBeNaN();
         expect(result2).toBeNaN();
     });
@@ -45,7 +40,8 @@ describe('cleanNumbers()', () => {
         
         const cleanedNumbers = cleanNumbers(numberValues);
     
-        expect(cleanedNumbers[0]).toBeTypeOf('number');
+        // expect(cleanedNumbers[0]).toBeTypeOf('number');
+        expect(cleanedNumbers).toEqual([1, 2, 3]);
     });
 
     it('should throw an error if an array with at least one empty string is provided', () => {
